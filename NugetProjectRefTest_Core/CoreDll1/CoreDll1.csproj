@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Version>8.0.0-Alpha001</Version>
+    <Authors>Me</Authors>
+    <Company>My Company</Company>
+    <Product>My Product</Product>
+    <Description>Deminstrating Project Reference nuget versioning problems.</Description>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CoreDll2\CoreDll2.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,26 @@
+﻿<Project>
+  <PropertyGroup>
+    <SolutionVersion>8.0.0-Alpha001</SolutionVersion>
+
+    <Authors>Me</Authors>
+    <Title>NetDll1</Title>
+    <Description>demonstrating Project Reference nuget versioning problems.</Description>
+
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageOutputPath Condition=" '$(PackageOutputPath)' == '' ">$(SolutionDir)Packages.Output</PackageOutputPath>
+    <IncludeSymbols Condition=" '$(IncludeSymbols)' == '' ">true</IncludeSymbols>
+    <IncludeSource Condition=" '$(IncludeSource)' == '' ">true</IncludeSource>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <PackageVersion>$(SolutionVersion)-Debug</PackageVersion>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugType>pdbonly</DebugType>
+    <PackageVersion>$(SolutionVersion)</PackageVersion>
+  </PropertyGroup>
+</Project>
